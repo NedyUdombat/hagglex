@@ -1,0 +1,691 @@
+@import './variables';
+@import './custom';
+
+.main-body {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: fuchsia;
+  margin-top: 70px;
+
+  .navbar {
+    padding: .5rem 2.375rem;
+    height: $navbar-height;
+
+    .navbar-brand {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+
+    .nav-icon {
+      width: 30.5px;
+      height: 35.75px;
+    }
+
+    .name-avatar {
+      width: 35px;
+      height: 35px;
+      background-color: #ECE5FF;
+      border-radius: 100%;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #2E1963;
+    }
+
+    .dropdown-item p {
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .sidebar {
+    padding-top: 40px;
+    background: $primary-white;
+    position: fixed;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: $sidebar-width;
+
+    .list-group {
+      border-radius: 0;
+    }
+
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+      height: 75px;
+      padding: 0 2.375rem;
+
+      .tab-icon {
+        display: block;
+      }
+
+      .tab-icon.active {
+        display: none;
+      }
+    }
+
+    .list-group-item .tab-icon {
+      width: 47.75px;
+      height: 47.75px;
+    }
+
+    .list-group-item p {
+      margin-bottom: 0;
+      margin-left: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #2E1963;
+      background-color: #ECE5FF;
+      border-left: 4.5px solid #2E1963;
+
+      .tab-icon {
+        display: none;
+      }
+
+      .tab-icon.active {
+        display: block;
+      }
+    }
+
+    .list-group-item:hover {
+      z-index: 2;
+      border-left: 4.5px solid #2E1963;
+    }
+  }
+
+  .main {
+    margin-left: $sidebar-width;
+    background-color: #F4F5F9;
+    width: -webkit-fill-available;
+    min-height: inherit;
+    margin-top: $navbar-height;
+
+    .tab-pane {
+      padding: 2.375rem;
+    }
+
+    .tab-pane p {
+      margin-bottom: 0;
+    }
+
+    .tab-pane .total-box {
+      background-image: linear-gradient(to right, #FFC175, #f7ac4f, orange, orange, orange, orange, orange);
+      height: 200px;
+      border-radius: 5px;
+      padding: 27.5px 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+
+
+      .title {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 600;
+      }
+
+      .total-amount {
+        font-size: 50px;
+        // line-height: 21px;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      .total-amount sup {
+        font-size: 18px;
+        // line-height: 21px;
+        font-weight: 400;
+        vertical-align: super;
+      }
+
+      .switch-pills {
+        background-color: $primary-white;
+        padding: 10px;
+        border-radius: 40px;
+        box-shadow: 1px 3px 3px 2px #00000030;
+      }
+
+      .switch-pills .nav-item .nav-link {
+        background-color: white;
+        padding: .5rem 2rem;
+        color: inherit;
+        border-radius: 50px;
+      }
+
+      .switch-pills .nav-item .nav-link.active {
+        background-color: orange;
+        color: inherit;
+        border-radius: 40px;
+        font-weight: 600;
+        box-shadow: 1px 3px 3px 2px #00000030;
+        border: 1px solid $primary-white;
+      }
+    }
+
+    .card {
+      box-shadow: 1px 2px 1px 1px #00000030;
+    }
+
+    .card.wallet-card {
+      padding-bottom: 60px;
+
+      .title-div .title {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 600;
+      }
+
+      .title-div .btn-custom-primary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2E1963;
+        color: $primary-white;
+        padding: .5rem 1.75rem;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: .3rem;
+      }
+
+      .title-div .btn-custom-primary svg {
+        margin-right: 10px;
+      }
+
+      .list-group-item {
+        background-color: transparent;
+        // border: 3px solid green;
+        height: 120px;
+        padding: 1rem 2.375rem;
+      }
+
+      .list-group-item:last-child {
+        border-bottom: 0;
+      }
+
+      .list-group-item.active {
+        color: #2E1963;
+        background-color: #ECE5FF;
+        border: initial;
+      }
+
+      .list-group-item.active:hover {
+        border-left: 0;
+      }
+
+      .list-group-item:hover {
+        border-left: 2px solid #2E1963;
+      }
+
+      .wallet-icon {
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+      }
+
+      .wallet-type-div .wallet-name {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .tag {
+        background-color: #b395ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        padding: 0 1rem;
+      }
+
+      .tag p {
+        font-size: 12px;
+        line-height: 12px;
+        margin-left: 6px;
+      }
+
+      .wallet-tag_icon-only {
+        padding: 0;
+        height: 30px;
+        width: 30px;
+      }
+
+      .currency-value {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .coin-value {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+    }
+
+    .card.wallet-balance-card-container {
+      padding: 50px 20px;
+    }
+
+    .wallet-balance-card {
+      height: 150px;
+      background-image: linear-gradient(to right, #FFC175, #f7ac4f, orange, orange, orange, orange, orange);
+      border-radius: 5px;
+      padding: 27.5px 1rem 27.5px 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+
+      .left {
+        display: flex;
+      }
+
+      .coin-logo {
+        box-shadow: -2px -4px 0px 10px white;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        margin-top: 10px;
+      }
+
+      .title {
+        font-size: 10px;
+        line-height: 21px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .total-amount {
+        font-size: 25px;
+        line-height: 21px;
+        font-weight: 600;
+        margin-bottom: 19px;
+      }
+
+      .export-btn {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .export-btn img {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px
+      }
+
+      .tag {
+        background-color: #ffe7c990;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        padding: 0 1.4rem;
+        border-radius: 30px;
+        width: fit-content;
+      }
+
+      .tag p {
+        font-size: 12px;
+        line-height: 12px;
+        margin-left: 6px;
+      }
+    }
+
+    .card.stats-card {
+      margin-top: 18px;
+      padding: 2.375rem;
+
+      .title {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 600;
+        margin-bottom: 50px;
+      }
+    }
+
+    .card.stats-card .inner {
+      display: flex;
+    }
+
+    .card.stats-card .inner .chart-container {
+      width: 50%;
+    }
+
+    .card.stats-card .inner .stat-container {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card.stats-card .inner .stat-container .wallet-stat-container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card.stats-card .inner .stat-container .wallet-stat-container .wallet-stat-name {
+      font-size: 10px;
+      margin-bottom: 6px;
+    }
+
+    .card.stats-card .inner .stat-container .wallet-stat-container .wallet-stat-percentage {
+      font-size: 24px;
+    }
+
+    .card.stats-card .inner .stat-container .wallet-stat-container .bar {
+      width: 60px;
+      height: 6px;
+      border-radius: 4.5px
+    }
+
+    .right-col .tab-pane {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .main-body {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: fuchsia;
+    margin-top: 0;
+
+    .navbar {
+      padding: .5rem 1rem;
+      height: fit-content;
+      box-shadow: 1px 3px 3px 2px #00000030;
+
+      .navbar-brand {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 600;
+      }
+
+      .nav-icon {
+        width: 30.5px;
+        height: 35.75px;
+      }
+    }
+
+    .sidebar {
+      padding-top: 0;
+      background: $primary-white;
+      position: fixed;
+      bottom: 0;
+      min-height: fit-content;
+      max-height: fit-content;
+      min-width: 100vw;
+      max-width: 100vw;
+      z-index: 2;
+
+      .list-group {
+        border-radius: 0;
+        flex-direction: row;
+        min-width: 100vw;
+        max-width: 100vw;
+        z-index: 2;
+      }
+
+      .list-group-item {
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        justify-content: center;
+        height: 50px;
+        padding: 0;
+        z-index: 2;
+      }
+
+      .list-group-item.active {
+        z-index: 2;
+        color: #2E1963;
+        background-color: #ECE5FF;
+        border-left: 0;
+        border-bottom: 2.5px solid #2E1963;
+        margin-top: 0;
+      }
+
+
+      .list-group-item:hover {
+        border-left: 0;
+        border-bottom: 2.5px solid #2E1963;
+      }
+
+      .list-group-item .tab-icon {
+        width: 30.75px;
+        height: 30.75px;
+      }
+
+      .list-group-item p {
+        display: none;
+      }
+    }
+
+    .main {
+      margin-left: 0;
+      width: -webkit-fill-available;
+      min-height: auto;
+      margin-top: 56px;
+
+      .tab-pane {
+        padding: 1rem;
+      }
+
+      .tab-pane p {
+        margin-bottom: 0;
+      }
+
+      .tab-pane .total-box {
+        height: fit-content;
+        border-radius: 6px;
+        padding: .8rem;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .tab-pane .total-box .title {
+        font-size: 16px;
+      }
+
+      .tab-pane .total-box .total-amount {
+        font-size: 40px;
+        margin-top: 2px;
+      }
+
+      .tab-pane .total-box .total-amount sup {
+        font-size: 12px;
+      }
+
+      .tab-pane .total-box .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .tab-pane .total-box .switch-pills {
+        border-radius: 30px;
+        width: 180px;
+      }
+
+      .tab-pane .total-box .switch-pills .nav-item {
+        width: 50%;
+      }
+
+      .tab-pane .total-box .switch-pills .nav-item .nav-link {
+        padding: .5rem .3rem;
+        border-radius: 30px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .card.wallet-card {
+        padding-bottom: 0;
+
+        .title-div .title {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        .title-div .btn-custom-primary {
+          padding: .5rem .5rem;
+          font-size: 12px;
+          line-height: 1.5;
+          border-radius: 100%;
+
+          p {
+            display: none;
+          }
+        }
+
+        .title-div .btn-custom-primary svg {
+          margin-right: 0;
+        }
+
+        .list-group-item {
+          height: fit-content;
+          padding: 1rem;
+        }
+
+        .list-group-item:not(:first-child) {
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+
+        .wallet-icon {
+          width: 35px;
+          height: 35px;
+          margin-top: 20px;
+          margin-right: 15px;
+        }
+
+        .wallet-type-div .wallet-name {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+
+        .currency-value {
+          font-size: 14px;
+        }
+
+        .coin-value {
+          font-size: 12px;
+          margin-top: 0;
+        }
+
+        .list-group-item .right {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        .list-group-item .right .fa-exchange-alt {
+          display: flex !important;
+          font-size: 12px;
+        }
+      }
+
+      .card.wallet-balance-card-container {
+        padding: 1rem;
+        margin-top: 18px;
+        margin-bottom: 60px;
+      }
+
+      .wallet-balance-card {
+        height: fit-content;
+        padding: 1rem;
+        flex-direction: column;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .coin-logo {
+          margin-right: 0;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          margin-bottom: 5px;
+          text-align: center;
+        }
+
+        .total-amount {
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .right {
+          width: 100%;
+        }
+
+        .export-btn {
+          width: -webkit-fill-available;
+        }
+
+        .export-btn img {
+          margin-right: 10px
+        }
+
+        .tag {
+          margin: 0 auto 15px;
+        }
+      }
+
+      .card.stats-card {
+        margin-top: 18px;
+        min-height: fit-content;
+        padding: 1rem;
+
+        .title {
+          margin-bottom: 5px;
+        }
+      }
+
+      .card.stats-card .inner {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .card.stats-card .inner .chart-container {
+        width: 100%;
+      }
+
+      .card.stats-card .inner .stat-container {
+        width: 100%;
+      }
+
+      .card.stats-card .inner .stat-container .wallet-stat-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .right-col .tab-pane {
+        padding: 0;
+      }
+    }
+  }
+}

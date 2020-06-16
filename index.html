@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="US">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Haggle X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/stylesheet/index.css">
+</head>
+<body>
+
+  <section class="main-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <a class="navbar-brand" href="#">HaggleX</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <img src="./assets/icons/bell.svg" alt="dashboard icon" class="nav-icon">
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              <div class="name-avatar d-flex justify-content-center align-items-center">
+                WO
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown nav-link">
+              <a class="btn bg-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Wills Omaer
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="fas fa-cog font-icon 3x"></i>
+                  <p>Settings</p>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="fas fa-sign-out-alt font-icon 3x"></i>
+                  <p>Sign Out</p>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <aside class="sidebar">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action d-flex align-items-center" id="list-dashboard-list" data-toggle="list" href="#list-dashboard" role="tab" aria-controls="dashboard">
+          <img src="./assets/icons/dashboard.svg" alt="dashboard icon" class="tab-icon">
+          <img src="./assets/icons/dashboard-active.svg" alt="dashboard icon" class="tab-icon active">
+          <p>Dashboard</p>
+        </a>
+        <a class="list-group-item list-group-item-action active d-flex align-items-center" id="list-wallet-list" data-toggle="list" href="#list-wallet" role="tab" aria-controls="wallet">
+          <img src="./assets/icons/wallet.svg" alt="dashboard icon" class="tab-icon">
+          <img src="./assets/icons/wallet-active.svg" alt="dashboard icon" class="tab-icon active">
+          <p>Wallet</p>
+        </a>
+        <a class="list-group-item list-group-item-action d-flex align-items-center" id="list-otc-list" data-toggle="list" href="#list-otc" role="tab" aria-controls="otc">
+          <img src="./assets/icons/otc.svg" alt="dashboard icon" class="tab-icon">
+          <img src="./assets/icons/otc-active.svg" alt="dashboard icon" class="tab-icon active">
+          <p>OTC</p>
+        </a>
+        <a class="list-group-item list-group-item-action d-flex align-items-center" id="list-utilities-list" data-toggle="list" href="#list-utilities" role="tab" aria-controls="utilities">
+          <img src="./assets/icons/utilities.svg" alt="dashboard icon" class="tab-icon">
+          <img src="./assets/icons/utilities-active.svg" alt="dashboard icon" class="tab-icon active">
+          <p>Utilities</p>
+        </a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade" id="list-dashboard" role="tabpanel" aria-labelledby="list-dashboard-list">Dashboard</div>
+        <div class="tab-pane fade show active" id="list-wallet" role="tabpanel" aria-labelledby="list-wallet-list">
+          <div class="total-box">
+            <div class="left">
+              <p class="title">My Asset Portfolio</p>
+              <p class="total-amount">N516,732.87 <sup>NGN</sup></p>
+            </div>
+            <div class="right">
+              <ul class="nav nav-pills mb-3 switch-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-usd-tab" data-toggle="pill" href="#pills-usd" role="tab" aria-controls="pills-usd" aria-selected="true">USD</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-naira-tab" data-toggle="pill" href="#pills-naira" role="tab" aria-controls="pills-naira" aria-selected="false">NGN</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="row w-100">
+              <div class="col-12 col-lg-6 pr-md-2 pl-md-0 px-0">
+                <div class="card border-0 bg-white wallet-card">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action title-div d-flex justify-content-between align-items-center">
+                      <p class="title">My Wallet</p>
+                      <button class="btn btn-custom-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 27 27"><defs><style>.a,.b{fill:#fff;}.a{opacity:0.2;}</style></defs><g transform="translate(-0.09 -0.091)"><circle class="a" cx="13.5" cy="13.5" r="13.5" transform="translate(0.09 0.091)"/><rect class="b" width="3" height="17" rx="1.5" transform="translate(12.09 5.091)"/><rect class="b" width="3" height="17" rx="1.5" transform="translate(22.09 12.091) rotate(90)"/></g></svg>
+                        <p class="text-white">Add new wallet</p>
+                      </button>
+                    </a>
+                    <a class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center" id="list-wallet1-list" data-toggle="list" href="#list-wallet1" role="tab" aria-controls="wallet1">
+                      <div class="left">
+                        <div class="d-flex">
+                          <img src="./assets/icons/bitcoin-blue.svg" alt="bitcoin logo in blue" class="wallet-icon">
+                          <div class="wallet-type-div">
+                            <p class="wallet-name">Salary Wallet (BTC)</p>
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <div class="tag wallet-tag rounded-pill">
+                                  <i class="fas fa-shield-alt"></i>
+                                  <p>Non-Custodial</p>
+                                </div>
+                              </div>
+                              <div class="btn-group" role="group" aria-label="Second group">
+                                <div class="tag wallet-tag_icon-only rounded-circle">
+                                  <i class="fas fa-university"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right text-right">
+                        <p class="currency-value">&#36;1024.43</p>
+                        <i class="fas fa-exchange-alt d-none"></i>
+                        <p class="coin-value">0.02345668BTC</p>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" id="list-wallet2-list" data-toggle="list" href="#list-wallet2" role="tab" aria-controls="wallet2">
+                      <div class="left">
+                        <div class="d-flex">
+                          <img src="./assets/icons/ethereum-blue.svg" alt="bitcoin logo in blue" class="wallet-icon">
+                          <div class="wallet-type-div">
+                            <p class="wallet-name">My Savings (ETH)</p>
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <div class="tag wallet-tag rounded-pill">
+                                  <i class="fas fa-wallet"></i>
+                                  <p>Custodial</p>
+                                </div>
+                              </div>
+                              <div class="btn-group" role="group" aria-label="Second group">
+                                <div class="tag wallet-tag_icon-only rounded-circle">
+                                  <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right text-right">
+                        <p class="currency-value">&#36;1024.43</p>
+                        <i class="fas fa-exchange-alt d-none"></i>
+                        <p class="coin-value">0.02345668ETH</p>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" id="list-wallet3-list" data-toggle="list" href="#list-wallet3" role="tab" aria-controls="wallet3">
+                      <div class="left">
+                        <div class="d-flex">
+                          <img src="./assets/icons/litecoin-blue.svg" alt="bitcoin logo in blue" class="wallet-icon">
+                          <div class="wallet-type-div">
+                            <p class="wallet-name">Vacation (LTC)</p>
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <div class="tag wallet-tag rounded-pill">
+                                  <i class="fas fa-shield-alt"></i>
+                                  <p>Non-Custodial</p>
+                                </div>
+                              </div>
+                              <div class="btn-group" role="group" aria-label="Second group">
+                                <div class="tag wallet-tag_icon-only rounded-circle">
+                                  <i class="fas fa-university"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right text-right">
+                        <p class="currency-value">&#36;1024.43</p>
+                        <i class="fas fa-exchange-alt d-none"></i>
+                        <p class="coin-value">0.02345668LTC</p>
+                      </div>
+                    </a>
+
+                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" id="list-wallet4-list" data-toggle="list" href="#list-wallet4" role="tab" aria-controls="wallet4">
+                      <div class="left">
+                        <div class="d-flex">
+                          <img src="./assets/icons/nairacoin-blue.svg" alt="bitcoin logo in blue" class="wallet-icon">
+                          <div class="wallet-type-div">
+                            <p class="wallet-name">Naira Flex Wallet (USD)</p>
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                              <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <div class="tag wallet-tag rounded-pill">
+                                  <i class="fas fa-wallet"></i>
+                                  <p>Virtual Wallet</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right text-right">
+                        <p class="currency-value">&#36;22024.43</p>
+                        <i class="fas fa-exchange-alt d-none"></i>
+                        <p class="coin-value">0.02345668NGTN</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="stats-card card">
+                  <p class="title">Wallet Stats</p>
+                  <div class="inner">
+                    <div class="chart-container"  style="position: relative; height:-webkit-fill-available;">
+                      <canvas id="myChart" width="235" height="235" aria-label="Wallet statistics" role="img" responsive></canvas>
+                    </div>
+                    <div class="stat-container">
+                      <div class="wallet-stat-container">
+                        <div>
+                          <p class="wallet-stat-name">Bitcoin</p>
+                          <p class="wallet-stat-percentage">48%</p>
+                          <div class="bar" style="background-color: #FFC175;"></div>
+                        </div>
+                      </div>
+                      <div class="wallet-stat-container">
+                        <div>
+                          <p class="wallet-stat-name">Ethereum</p>
+                          <p class="wallet-stat-percentage">12%</p>
+                          <div class="bar" style="background-color: #CA70F6;"></div>
+                        </div>
+                      </div>
+                      <div class="wallet-stat-container">
+                        <div>
+                          <p class="wallet-stat-name">Litecoin</p>
+                          <p class="wallet-stat-percentage">25%</p>
+                          <div class="bar" style="background-color: #7F59DE;"></div>
+                        </div>
+                      </div>
+                      <div class="wallet-stat-container">
+                        <div>
+                          <p class="wallet-stat-name">Flex Wallet</p>
+                          <p class="wallet-stat-percentage">15%</p>
+                          <div class="bar" style="background-color: #DDDDDD;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6 pl-md-2 pr-md-0 px-0 right-col">
+                <div  class="card border-0 bg-white wallet-balance-card-container">
+
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-wallet1" role="tabpanel" aria-labelledby="list-wallet1-list">
+                      <div class="card border-0 bg-white wallet-balance-card">
+                        <div class="left">
+                          <img src="./assets/icons/bitcoin-orange.svg" alt="bitcoin logo in orange" class="coin-logo">
+                          <div>
+                            <p class="title">Wallet Balance</p>
+                            <p class="total-amount">0.02345668BTC</p>
+                            <div class="tag">
+                              <p>&#36;12.24(12.12%)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <button type="button" class="btn bg-white rounded d-flex export-btn">
+                            <img src="./assets/icons/send.svg" alt="send mail icon">
+                            <p>Export Private Key</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-wallet2" role="tabpanel" aria-labelledby="list-wallet2-list">
+                      <div class="card border-0 bg-white wallet-balance-card" style="background-image: linear-gradient(to right, #7925A3, #7925A3, #7925A3, #7925A3, #541871, #541871, #724789);">
+                        <div class="left">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" class="coin-logo" style="box-shadow: none; margin-left: -1rem;">
+                            <defs>
+                              <style>.a{fill:#FFFFFF;opacity:0.9;}.b{fill:#2e1963;}</style>
+                            </defs>
+                            <g transform="translate(-0.12 -0.419)">
+                              <rect class="a" width="65" height="64" rx="32" transform="translate(0.12 0.419)"/>
+                              <path class="b" d="M24.649,20.671,12.61,28.026.563,20.671,12.61,0ZM12.61,30.388.563,23.033,12.61,40.581,24.657,23.033Z" transform="translate(19.691 12.892)"/>
+                            </g>
+                          </svg>
+                          <div>
+                            <p class="title text-white">Wallet Balance</p>
+                            <p class="total-amount text-white">0.02345668ETH</p>
+                            <div class="tag" style="background-color: #f5aef590;">
+                              <p class="text-white">&#36;12.24(12.12%)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <button type="button" class="btn bg-white rounded d-flex export-btn">
+                            <img src="./assets/icons/send.svg" alt="send mail icon">
+                            <p>Export Private Key</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-wallet3" role="tabpanel" aria-labelledby="list-wallet3-list">
+                      <div class="card border-0 bg-white wallet-balance-card" style="background-image: linear-gradient(to right, #4B3289, #4B3289, #583D9E, #583D9E, #583D9E, #6345B0, #6345B0);">
+                        <div class="left">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" class="coin-logo" style="box-shadow: none; margin-left: -1rem;">
+                            <defs>
+                              <style>.a{fill:#ffffff;opacity:0.9;}.b{fill:#2e1963;}</style>
+                            </defs>
+                            <g transform="translate(-0.12 -0.231)">
+                              <rect class="a" width="55" height="55" rx="27.5" transform="translate(0.12 0.231)"/>
+                              <path class="b" d="M15.478,20.618l1.643-6.278,3.9-1.444.97-3.69-.04-.08L18.111,10.55,20.883,0H13.043L9.419,13.759,6.41,14.882,5.4,18.673l3.029-1.1-2.138,8.1H27.16l1.327-5.054Z" transform="translate(11.284 13.939)"/>
+                            </g>
+                          </svg>
+                          <div>
+                            <p class="title text-white">Wallet Balance</p>
+                            <p class="total-amount text-white">0.02345668LTC</p>
+                            <div class="tag" style="background-color: #f5aef590;">
+                              <p class="text-white">&#36;12.24(12.12%)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <button type="button" class="btn bg-white rounded d-flex export-btn">
+                            <img src="./assets/icons/send.svg" alt="send mail icon">
+                            <p>Export Private Key</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-wallet4" role="tabpanel" aria-labelledby="list-wallet4-list">
+                      <div class="card border-0 bg-white wallet-balance-card" style="background-image: linear-gradient(to right, #7F52C3, #7F52C3, #9442CF, #9442CF, #9442CF, #A536D9, #A536D9);">
+                        <div class="left">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" class="coin-logo" style="box-shadow: none; margin-left: -1rem;">
+                            <defs>
+                              <style>.a{fill:#ffffff;opacity:0.9;}.b{fill:#2e1963;font-size:35px;font-family:BasisGrotesquePro-Bold, Basis Grotesque Pro;font-weight:700;}</style>
+                            </defs>
+                            <g transform="translate(-6.12 -0.043)">
+                              <rect class="a" width="51" height="51" rx="25.5" transform="translate(6.12 0.043)"/>
+                              <text class="b" transform="translate(19.12 38.044)">
+                                <tspan x="0" y="0">N</tspan>
+                              </text>
+                            </g>
+                          </svg>
+                          <div>
+                            <p class="title text-white">Wallet Balance</p>
+                            <p class="total-amount text-white">0.02345668NGTN</p>
+                            <div class="tag" style="background-color: #f5aef590;">
+                              <p class="text-white">&#36;12.24(12.12%)</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="right">
+                          <button type="button" class="btn bg-white rounded d-flex export-btn">
+                            <img src="./assets/icons/send.svg" alt="send mail icon">
+                            <p>Export Private Key</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="list-otc" role="tabpanel" aria-labelledby="list-otc-list">OTC</div>
+        <div class="tab-pane fade" id="list-utilities" role="tabpanel" aria-labelledby="list-utilities-list">Utilities</div>
+      </div>
+    </main>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" integrity="sha256-nZaxPHA2uAaquixjSDX19TmIlbRNCOrf5HO1oHl5p70=" crossorigin="anonymous"></script>
+
+  <script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          label: '# of Votes',
+          data: [48, 12, 25, 15],
+          backgroundColor: [
+            '#FFC175',
+            '#CA70F6',
+            '#7F59DE',
+            '#DDDDDD'
+          ],
+          borderWidth: 0,
+          weight: 1,
+        }]
+      },
+      options: {
+        legend: {
+          display: false,
+        }
+      }
+    });
+  </script>
+</body>
+</html>
